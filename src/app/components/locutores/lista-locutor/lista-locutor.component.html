@@ -1,0 +1,38 @@
+<h1 class="text-center">Listado de locutores</h1>
+<table class="table table-bordered table-striped text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Agustin</td>
+            <td>Lamboglia</td>
+            <td>40.256.855</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Gustavo</td>
+            <td>Toobe</td>
+            <td>40.157.203</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

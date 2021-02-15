@@ -1,0 +1,50 @@
+<h1 class="text-center">Listado de directores</h1>
+<table class="table table-bordered table-striped text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">DNI</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mateo</td>
+            <td>Schultheis</td>
+            <td>39.256.855</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Ariel</td>
+            <td>Spais</td>
+            <td>El primero</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Leandro</td>
+            <td>Estrada</td>
+            <td>El segundo</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

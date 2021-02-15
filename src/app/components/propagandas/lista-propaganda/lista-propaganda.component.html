@@ -1,0 +1,46 @@
+<h1 class="text-center">Listado de propagandas</h1>
+<table class="table table-bordered table-striped text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Empresa</th>
+            <th scope="col">CUIT</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Microsoft</td>
+            <td>175842136248</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Google</td>
+            <td>121549856235</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Amazon</td>
+            <td>1472583698</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

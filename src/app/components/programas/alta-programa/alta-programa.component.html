@@ -1,0 +1,98 @@
+<div class="text-center"><h1>Complete los datos del programa</h1></div>
+<div class="w-50 p-3 mx-auto">
+    <form>
+        <div class="form-group row">
+            <label for="inputTitulo" class="col-sm-2 col-form-label">Titulo</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="inputTitulo" placeholder="Titulo">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inlineFormCustomSelect">Dia</label>
+            <select class="custom-select col-sm-10" id="inlineFormCustomSelect">
+              <option value="1">Lunes</option>
+              <option value="2">Martes</option>
+              <option value="3">Miercoles</option>
+              <option value="4">Jueves</option>
+              <option value="5">Viernes</option>
+              <option value="6">Sabado</option>
+              <option value="7">Domingo</option>
+            </select>
+          </div>
+        <div class="form-group row">
+            <label for="inputHorario" class="col-sm-2 col-form-label">Horario</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="time" id="inputHorario" placeholder="Horario">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputDuracion" class="col-sm-2 col-form-label">Duracion</label>
+            <div class="col-sm-10">
+                <input class="form-control" type= "time" id="inputDuracion" placeholder="Duracion">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputDirector" class="col-sm-2 col-form-label">Director</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="inputDirector" placeholder="Director">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputLocutor" class="col-sm-2 col-form-label">Locutor</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="inputLocutor" placeholder="Locutor">
+            </div>
+        </div>
+    </form>
+</div>
+<div class="w-50 p-3 mx-auto">
+    <div class="form-group row text-center">
+        <div class="col-sm-10 mx-auto">
+          <button type="button" class="btn btn-danger">Cancelar</button> &nbsp;
+          <button type="submit" class="btn btn-primary" (click)="onPeriodo()">Continuar</button>
+        </div>
+      </div>
+</div>
+
+<!--Inicio formulario de alta periodo-->
+<div *ngIf="verPeriodo">
+    <div class="text-center">
+        <h1>Complete los datos del periodo</h1>
+    </div>
+    <div class="w-50 p-3 mx-auto">
+        <form>
+            <div class="form-group row">
+                <label for="inputDuracion" class="col-sm-2 col-form-label">Duracion</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="time" id="inputDuracion" placeholder="Duracion">
+                </div>
+            </div>
+            <!--Radio buton para indicar si es propaganda o tema musical-->
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                value="publicidad">
+                <label class="form-check-label" for="inlineRadio1">Publicidad</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                value="temaMusical">
+                <label class="form-check-label" for="inlineRadio2">Tema musical</label>
+            </div>   
+        </form>
+    </div>
+    <div class="w-50 p-3 mx-auto">
+        <div class="form-group row text-center">
+            <div class="col-sm-10 mx-auto">
+              <button type="button" class="btn btn-danger">Cancelar</button> &nbsp;
+              <button type="submit" class="btn btn-primary" (click)="onRadioButton()">Continuar</button>
+            </div>
+          </div>
+    </div>
+</div>
+
+<!--Inicio formulario de alta propaganda o alta tema
+<div *ngIf="inlineRadioOptions === 'publicidad'; else elseBlock">
+    publicidad.</div>
+<ng-template #elseBlock>tema musical</ng-template>
+-->
+

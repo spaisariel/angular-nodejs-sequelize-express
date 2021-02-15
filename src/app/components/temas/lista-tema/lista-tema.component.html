@@ -1,0 +1,46 @@
+<h1 class="text-center">Listado de temas</h1>
+<table class="table table-bordered table-striped text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Comfortably Numb</td>
+            <td>Pink Floyd</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Fat Old Sun</td>
+            <td>Pink Floyd</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Wait for Her</td>
+            <td>Roger Waters</td>
+            <td>
+                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+            </td>
+        </tr>
+    </tbody>
+</table>

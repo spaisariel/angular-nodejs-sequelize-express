@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Final LAB IV - Radio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <div class="btn-group mr-3">
+          <button [routerLink]="'/lista-programas'" type="button" class="btn btn-primary">Programas</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button [routerLink]="'/alta-programa'" ngbDropdownItem>Crear</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn-group mr-3">
+          <button [routerLink]="'/lista-locutores'" type="button" class="btn btn-primary">Locutores</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button [routerLink]="'/alta-locutor'" ngbDropdownItem>Crear</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn-group mr-3">
+          <button [routerLink]="'/lista-directores'" type="button" class="btn btn-primary">Directores</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button [routerLink]="'/alta-director'" ngbDropdownItem>Crear</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="btn-group mr-3">
+          <button [routerLink]="'/lista-periodos'" type="button" class="btn btn-primary">Periodos</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button [routerLink]="'/alta-periodo'" ngbDropdownItem>Crear</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn-group mr-3">
+          <button [routerLink]="'/lista-propagandas'" type="button" class="btn btn-primary">Propagandas</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button [routerLink]="'/alta-propaganda'" ngbDropdownItem>Crear</button>
+            </div>
+          </div>
+        </div>
+        <div class="btn-group mr-3">
+          <button [routerLink]="'/lista-temas'" type="button" class="btn btn-primary">Temas</button>
+          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle></button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button [routerLink]="'/alta-tema'" ngbDropdownItem>Crear</button>
+            </div>
+          </div>
+        </div> -->
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
