@@ -8,33 +8,40 @@ import { DirectorResponse } from "../models/directorResponse";
   providedIn: 'root'
 })
 export class DirectorService {
-  id: number = 0;
-  dni: number = 0;
-  nombre: string = '';
-  apellido: string = '';
+  id: number;
+  dni: number;
+  name: string;
+  email: string;
+  baseUrl: string = 'http://localhost:3000';
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }), withCredentials: false }
 
   constructor(private http: HttpClient) { }
 
+
+
   getDirector(id: number) {
-    return this.http.get<DirectorResponse>('/api/director/' + this.id);
+    return this.http.get<DirectorResponse>(this.baseUrl + '/api/directors/' + this.id);
   }
 
   getDirectores():Observable<DirectorResponse[]>{  
-    return this.http.get<DirectorResponse[]>('/api/director');  
+    return this.http.get<DirectorResponse[]>(this.baseUrl + '/api/directors');  
   }
 
   postDirector(director: DirectorRequest) {
-    return this.http.post<DirectorRequest>('/api/director', JSON.stringify(director), this.httpOptions);
+    return this.http.post<DirectorRequest>(this.baseUrl + '/api/directors', JSON.stringify(director), this.httpOptions);
   }
 
   updateDirector(director: DirectorRequest) {
-    return this.http.put<DirectorRequest>('/api/director/' + this.id, JSON.stringify(director), this.httpOptions);
+    return this.http.put<DirectorRequest>(this.baseUrl + '/api/directors/' + this.id, JSON.stringify(director), this.httpOptions);
   }
 
   deleteDirector(id: number) {
-    return this.http.delete<DirectorRequest>('/api/director/' + id, this.httpOptions);
+    return this.http.delete<DirectorRequest>(this.baseUrl + '/api/directors/' + id, this.httpOptions);
+  }
+
+  guardarId(id:number){
+    this.id=id;
   }
 
 }

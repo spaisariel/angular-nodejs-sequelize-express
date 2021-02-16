@@ -8,10 +8,10 @@ import { ProgramaResponse } from "../models/programaResponse";
     providedIn: 'root'
   })
   export class ProgramaService {
-    id: number = 0;
-    dni: number = 0;
-    nombre: string = '';
-    apellido: string = '';
+    id: number;
+    dni: number;
+    nombre: string;
+    apellido: string;
   
     httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }), withCredentials: false }
   

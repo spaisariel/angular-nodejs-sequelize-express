@@ -1,8 +1,8 @@
 export interface DirectorResponse {
     id:       number;
     dni:      string;
-    nombre:   string;
-    apellido: string;
+    name:   string;
+    email:     string;
 }
 
 export class Convert {

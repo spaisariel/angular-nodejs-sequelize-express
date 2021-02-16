@@ -1,8 +1,8 @@
 export interface LocutorResponse {
-    id:       number;
-    dni:      string;
-    nombre:   string;
-    apellido: string;
+    id:    number;
+    dni:   string;
+    name:  string;
+    email: string;
 }
 
 export class Convert {

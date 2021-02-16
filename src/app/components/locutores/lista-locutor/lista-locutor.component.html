@@ -4,34 +4,22 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Apellido</th>
             <th scope="col">DNI</th>
+            <th scope="col">Mail</th>
             <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Agustin</td>
-            <td>Lamboglia</td>
-            <td>40.256.855</td>
+        <tr *ngFor="let item of locutores; index as i">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.dni}}</td>
+            <td>{{item.email}}</td>
             <td>
-                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
-                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+                <button type="button" class="btn btn-primary">Detalle</button> &nbsp;
+                <button [routerLink]="'/modificar-locutor'" type="button" class="btn btn-success">Editar</button>
                 &nbsp;
-                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Gustavo</td>
-            <td>Toobe</td>
-            <td>40.157.203</td>
-            <td>
-                <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
-                <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
-                &nbsp;
-                <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+                <button (click)=onDelete(item.id) type="button" class="btn btn-danger">Eliminar</button> &nbsp;
             </td>
         </tr>
     </tbody>

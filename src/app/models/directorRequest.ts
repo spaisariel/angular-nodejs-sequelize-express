@@ -1,5 +1,5 @@
 export class DirectorRequest {
     dni: number;
-    nombre: string;
-    apellido: string;
+    name: string;
+    email: string;
 }
