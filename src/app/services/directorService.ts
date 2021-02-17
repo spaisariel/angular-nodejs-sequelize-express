@@ -19,9 +19,12 @@ export class DirectorService {
   constructor(private http: HttpClient) { }
 
 
-
-  getDirector(id: number) {
+  getDirector() {
     return this.http.get<DirectorResponse>(this.baseUrl + '/api/directors/' + this.id);
+  }
+
+  getDirectorById(id: number) {
+    return this.http.get<DirectorResponse>(this.baseUrl + '/api/directors/' + id);
   }
 
   getDirectores():Observable<DirectorResponse[]>{  
@@ -33,7 +36,7 @@ export class DirectorService {
   }
 
   updateDirector(director: DirectorRequest) {
-    return this.http.put<DirectorRequest>(this.baseUrl + '/api/directors/' + this.id, JSON.stringify(director), this.httpOptions);
+    return this.http.patch<DirectorRequest>(this.baseUrl + '/api/directors/' + this.id, JSON.stringify(director), this.httpOptions);
   }
 
   deleteDirector(id: number) {

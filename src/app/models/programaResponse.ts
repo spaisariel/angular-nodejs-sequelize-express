@@ -2,10 +2,11 @@ import { Time } from "@angular/common";
 
 export interface ProgramaResponse {
     id:             number;
-    tituloPrograma: string;
-    dia:            Date;
-    horarioEmision: Time;
-    duracion:       Time;
+    name: string;
+    schedule: Time;
+    duration: Time;
+    day: string;
+    directorId: number;
 }
 
 export class Convert {

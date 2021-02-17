@@ -17,7 +17,7 @@
             <td>{{item.email}}</td>
             <td>
                 <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
-                <button [routerLink]="'/modificar-director'" type="button" class="btn btn-success">EDITAR</button>
+                <button (click)=onClick(item.id) [routerLink]="'/modificar-director'" type="button" class="btn btn-success">EDITAR</button>
                 &nbsp;
                 <button (click)=onDelete(item.id) type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
             </td>

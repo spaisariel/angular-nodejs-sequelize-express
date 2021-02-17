@@ -4,56 +4,28 @@
       <tr>
         <th scope="col">#</th>
         <th scope="col">Titulo</th>
-        <th scope="col">Dia</th>
         <th scope="col">Horario de emision</th>
         <th scope="col">Duración</th>
+        <th scope="col">Dia</th>
         <th scope="col">Director</th>
-        <th scope="col">Locutor</th>
+        <!--<th scope="col">Locutor</th>-->
         <th scope="col">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Presto al dia</td>
-        <td>12:30hs</td>
-        <td>Lunes</td>
-        <td>10:30</td>
-        <td>Ariel Spais</td>
-        <td>Spais Ariel</td>
-        <td>
-            <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
-            <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button> &nbsp;
-            <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
-        </td>
+      <tr *ngFor="let item of programas; index as i">
+          <th scope="row">{{item.id}}</th>
+          <td>{{item.name}}</td>
+          <td>{{item.schedule}}</td>
+          <td>{{item.duration}}</td>
+          <td>{{item.day}}</td>
+          <td>{{item.directorId}}</td><!--Cambiar acá seguramente-->
+          <td>
+              <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
+              <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button>
+              &nbsp;
+              <button (click)=onDelete(item.id) type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
+          </td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Presto 24/7</td>
-        <td>12:30hs</td>
-        <td>Martes</td>
-        <td>8:30</td>
-        <td>Ariel Spais</td>
-        <td>Spais Ariel</td>
-        <td>
-            <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
-            <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button> &nbsp;
-            <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
-        </td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Presto Recargado</td>
-        <td>12:30hs</td>
-        <td>Miercoles</td>
-        <td>10:00</td>
-        <td>Ariel Spais</td>
-        <td>Spais Ariel</td>
-        <td>
-            <button type="button" class="btn btn-primary">DETALLE</button> &nbsp;
-            <button [routerLink]="'/modificar-programa'" type="button" class="btn btn-success">EDITAR</button> &nbsp;
-            <button type="button" class="btn btn-danger">ELIMINAR</button> &nbsp;
-        </td>
-      </tr>
-    </tbody>
+  </tbody>
   </table>
